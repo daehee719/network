@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "27ce467a-7914-43ce-ace4-ee644fd4e72d": {
+      "ProjectGuid": "27ce467a-7914-43ce-ace4-ee644fd4e72d",
+      "DisplayName": "socketLecture",
+      "ColorIndex": 0
+    },
+    "f5b2c518-bda9-4729-85ef-5e12d14a822d": {
+      "ProjectGuid": "f5b2c518-bda9-4729-85ef-5e12d14a822d",
+      "DisplayName": "socketClient",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
