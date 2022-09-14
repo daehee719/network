@@ -1,6 +1,5 @@
 #include <iostream>
 #include <thread>
-
 using namespace std;
 
 
@@ -9,6 +8,7 @@ void Func1(int* result)
 {
 	for (int i = 0; i < 3333; i++)
 	{
+
 		*result += i;
 	}
 }
@@ -29,19 +29,12 @@ void Func3(int* result)
 
 int main()
 {
-	/*thread t1(Func1);
-	thread t2(Func2);
-	thread t3([] {
-		for (int i = 0; i < 10; i++)
-		{
-			cout << "Thread3 is running..." << endl;
-		}
-		});*/
 	int result = 0;
+	mutex m;
 
-	thread t1(Func1,&result);
-	thread t2(Func2,&result);
-	thread t3(Func3,&result);
+	thread t1(Func1,&result, mutex);
+	thread t2(Func2,&result, mutex);
+	thread t3(Func3,&result, mutex);
 	t1.join();
 	t2.join();
 	t3.join();
